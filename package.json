@@ -18,7 +18,9 @@
     "gen:manifest": "node scripts/generate-manifest.js",
     "gen:changelog": "node scripts/convert-changelog.js",
     "postbuild": "echo 'Build completed - sitemap generation disabled'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    // 新增的 pages:build 脚本，适配 Cloudflare Pages 部署
+    "pages:build": "pnpm gen:runtime && pnpm gen:manifest && next build && next-on-pages build"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.12",
