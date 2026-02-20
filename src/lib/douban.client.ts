@@ -105,7 +105,7 @@ function getDoubanProxyConfig(): {
   const doubanProxyType =
     localStorage.getItem('doubanDataSource') ||
     (window as any).RUNTIME_CONFIG?.DOUBAN_PROXY_TYPE ||
-    'direct';
+    'cmliussss-cdn-tencent';
   const doubanProxy =
     localStorage.getItem('doubanProxyUrl') ||
     (window as any).RUNTIME_CONFIG?.DOUBAN_PROXY ||
@@ -199,7 +199,7 @@ export async function getDoubanCategories(
   const { proxyType, proxyUrl } = getDoubanProxyConfig();
   switch (proxyType) {
     case 'cors-proxy-zwei':
-      return fetchDoubanCategories(params, 'https://cors.eu.org/');
+      return fetchDoubanCategories(params, 'https://ciao-cors.is-an.org/');
     case 'cmliussss-cdn-tencent':
       return fetchDoubanCategories(params, '', true, false);
     case 'cmliussss-cdn-ali':
@@ -232,7 +232,7 @@ export async function getDoubanList(
   const { proxyType, proxyUrl } = getDoubanProxyConfig();
   switch (proxyType) {
     case 'cors-proxy-zwei':
-      return fetchDoubanList(params, 'https://cors.eu.org/');
+      return fetchDoubanList(params, 'https://ciao-cors.is-an.org/');
     case 'cmliussss-cdn-tencent':
       return fetchDoubanList(params, '', true, false);
     case 'cmliussss-cdn-ali':
@@ -352,7 +352,7 @@ export async function getDoubanRecommends(
   const { proxyType, proxyUrl } = getDoubanProxyConfig();
   switch (proxyType) {
     case 'cors-proxy-zwei':
-      return fetchDoubanRecommends(params, 'https://cors.eu.org/');
+      return fetchDoubanRecommends(params, 'https://ciao-cors.is-an.org/');
     case 'cmliussss-cdn-tencent':
       return fetchDoubanRecommends(params, '', true, false);
     case 'cmliussss-cdn-ali':
