@@ -1359,9 +1359,9 @@ const SiteConfigComponent = ({ config }: { config: AdminConfig | null }) => {
     Announcement: '',
     SearchDownstreamMaxPage: 1,
     SiteInterfaceCacheTime: 7200,
-    DoubanProxyType: 'direct',
+    DoubanProxyType: 'cmliussss-cdn-tencent',
     DoubanProxy: '',
-    DoubanImageProxyType: 'direct',
+    DoubanImageProxyType: 'cmliussss-cdn-tencent',
     DoubanImageProxy: '',
     DisableYellowFilter: false,
   });
@@ -1430,10 +1430,10 @@ const SiteConfigComponent = ({ config }: { config: AdminConfig | null }) => {
     if (config?.SiteConfig) {
       setSiteSettings({
         ...config.SiteConfig,
-        DoubanProxyType: config.SiteConfig.DoubanProxyType || 'direct',
+        DoubanProxyType: config.SiteConfig.DoubanProxyType || 'cmliussss-cdn-tencent',
         DoubanProxy: config.SiteConfig.DoubanProxy || '',
         DoubanImageProxyType:
-          config.SiteConfig.DoubanImageProxyType || 'direct',
+          config.SiteConfig.DoubanImageProxyType || 'cmliussss-cdn-tencent',
         DoubanImageProxy: config.SiteConfig.DoubanImageProxy || '',
         DisableYellowFilter: config.SiteConfig.DisableYellowFilter || false,
       });
